@@ -2,7 +2,7 @@ var main = document.getElementById('main');
 document.getElementById('btn_ara').addEventListener('click',weather_current(document.getElementById('ara').value));
 
 function weather_current(city="istanbul"){
-  fetch(`https://api.weatherapi.com/v1/forecast.json?key=f84b54b842de4b1c8e9230610202904&q=${city}&days=3&lang=tr&hour=24`)
+  fetch(`https://api.weatherapi.com/v1/forecast.json?key=<apikey>&q=${city}&days=3&lang=tr&hour=24`)
   .then(Response => {
     return Response.json();
   })
